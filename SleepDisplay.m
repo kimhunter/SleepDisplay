@@ -1,7 +1,6 @@
-#import <Foundation/Foundation.h>
-#import <IOKit/IOKitLib.h>
-
 /**
+ * SleepDisplay
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -15,6 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
  */
+
+#import <Foundation/Foundation.h>
+#import <IOKit/IOKitLib.h>
  
 
 int main (int argc, const char * argv[]) {
@@ -28,13 +30,13 @@ int main (int argc, const char * argv[]) {
         shouldWake = [flag isEqualToString:@"-wake"];
     }
     
-	io_registry_entry_t entry = IORegistryEntryFromPath(kIOMasterPortDefault, "IOService:/IOResources/IODisplayWrangler");
-	if(entry)
-	{
-		IORegistryEntrySetCFProperty(entry, CFSTR("IORequestIdle"), shouldWake ? kCFBooleanFalse : kCFBooleanTrue);
-		IOObjectRelease(entry);
-	}
-	
+    io_registry_entry_t entry = IORegistryEntryFromPath(kIOMasterPortDefault, "IOService:/IOResources/IODisplayWrangler");
+    if(entry)
+    {
+        IORegistryEntrySetCFProperty(entry, CFSTR("IORequestIdle"), shouldWake ? kCFBooleanFalse : kCFBooleanTrue);
+        IOObjectRelease(entry);
+    }
+    
     [pool drain];
     return 0;
 }
