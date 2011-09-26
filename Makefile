@@ -5,11 +5,12 @@ LION_PROJECT=SleepDisplay.xcodeproj
 VERSION=$(shell cat version)
 
 
+x64:
+	 xcodebuild -project $(LION_PROJECT) -configuration Release
+
 ub:
 	 xcodebuild -project $(LEO_PROJECT) -configuration Release
     
-x64:
-	 xcodebuild -project $(LION_PROJECT) -configuration Release
 
 dist_x64: x64
 	mkdir -p  dist/$(VERSION)/x64/
