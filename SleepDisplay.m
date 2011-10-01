@@ -17,17 +17,18 @@
 
 #import <Foundation/Foundation.h>
 #import <IOKit/IOKitLib.h>
- 
 
 int main (int argc, const char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-
+    NSArray *params = [[NSProcessInfo processInfo] arguments];
     BOOL shouldWake = NO;
 
-    if (argc > 1)
+    for (NSString *arg in params)
     {
-        NSString *flag = [NSString stringWithUTF8String:argv[1]];
-        shouldWake = [flag isEqualToString:@"-wake"];
+        if([arg isEqualToString:@"-wake"])
+        {
+            shouldWake = YES;
+        }
     }
     
     io_registry_entry_t entry = IORegistryEntryFromPath(kIOMasterPortDefault, "IOService:/IOResources/IODisplayWrangler");
