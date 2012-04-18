@@ -32,9 +32,9 @@ int main (int argc, const char * argv[]) {
         
         if([arg isEqualToString:@"-help"] || [arg isEqualToString:@"--help"] || [arg isEqualToString:@"-h"])
         {
-            printf("%s", [@"usage: SleepWake [-w]\n" UTF8String]);
-            printf("%s", [@"Without options, sleeps the display (not system sleep)\n" UTF8String]);
-            printf("%s", [@"use with the -w (--wake) option to wake\n" UTF8String]);
+            printf("usage: SleepWake [-w]\n");
+            printf("Without options, sleeps the display (not system sleep)\n");
+            printf("use with the -w (--wake) option to wake\n");
             // quit.
             [pool drain];
             return 0;
