@@ -17,6 +17,7 @@
 
 #import <Foundation/Foundation.h>
 #import <IOKit/IOKitLib.h>
+#include <iostream>
 
 int main (int argc, const char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
@@ -32,11 +33,11 @@ int main (int argc, const char * argv[]) {
         
         if([arg isEqualToString:@"-h"] || [arg isEqualToString:@"==help"])
         {
-            << "usage: SleepWake [-w]\n"
-            << "\n"
-            << "Without options, sleeps the display (not system sleep)\n"
-            << "use with the -w (--wake) option to wake\n"
-            << "\n"
+            std::cout << "usage: SleepWake [-w]\n"
+            std::cout << "\n"
+            std::cout << "Without options, sleeps the display (not system sleep)\n"
+            std::cout << "use with the -w (--wake) option to wake\n"
+            std::cout << "\n"
         }
     }
     
