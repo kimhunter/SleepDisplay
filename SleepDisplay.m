@@ -30,7 +30,7 @@ int main (int argc, const char * argv[]) {
             shouldWake = YES;
         }
         
-        if([arg isEqualToString:@"-h"] || [arg isEqualToString:@"==help"])
+        if([arg isEqualToString:@"-h"] || [arg isEqualToString:@"--help"] || [arg isEqualToString:@"-help"])
         {
             printf("%s", [@"usage: SleepWake [-w]\n" UTF8String]);
             printf("%s", [@"Without options, sleeps the display (not system sleep)\n" UTF8String]);
