@@ -35,6 +35,9 @@ int main (int argc, const char * argv[]) {
             printf("%s", [@"usage: SleepWake [-w]\n" UTF8String]);
             printf("%s", [@"Without options, sleeps the display (not system sleep)\n" UTF8String]);
             printf("%s", [@"use with the -w (--wake) option to wake\n" UTF8String]);
+            // quit.
+            [pool drain];
+            return 0;
         }
     }
     
