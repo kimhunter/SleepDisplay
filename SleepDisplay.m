@@ -25,9 +25,18 @@ int main (int argc, const char * argv[]) {
 
     for (NSString *arg in params)
     {
-        if([arg isEqualToString:@"-wake"])
+        if([arg isEqualToString:@"-wake"] || [arg isEqualToString:@"--wake"] || [arg isEqualToString:@"-w"])
         {
             shouldWake = YES;
+        }
+        
+        if([arg isEqualToString:@"-h"] || [arg isEqualToString:@"==help"])
+        {
+            << "usage: SleepWake [-w]\n"
+            << "\n"
+            << "Without options, sleeps the display (not system sleep)\n"
+            << "use with the -w (--wake) option to wake\n"
+            << "\n"
         }
     }
     
