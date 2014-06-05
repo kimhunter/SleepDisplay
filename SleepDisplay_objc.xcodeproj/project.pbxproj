@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* SleepDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepDisplay.m; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		32A70AAB03705E1F00C91783 /* SleepDisplay_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepDisplay_Prefix.pch; sourceTree = "<group>"; };
+		32A70AAB03705E1F00C91783 /* SleepDisplay_objc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepDisplay_objc_Prefix.pch; sourceTree = "<group>"; };
 		3B1A2DD71430705F00663B38 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		3BB02A3A19412552001FEA23 /* SleepDisplaySwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SleepDisplaySwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB02A3C19412552001FEA23 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				32A70AAB03705E1F00C91783 /* SleepDisplay_Prefix.pch */,
+				32A70AAB03705E1F00C91783 /* SleepDisplay_objc_Prefix.pch */,
 				08FB7796FE84155DC02AAC07 /* SleepDisplay.m */,
 			);
 			name = Source;
@@ -172,7 +172,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "SleepDisplay" */;
+			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "SleepDisplay_objc" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -220,7 +220,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = SleepDisplay_Prefix.pch;
+				GCC_PREFIX_HEADER = SleepDisplay_objc_Prefix.pch;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = SleepDisplay;
 				SDKROOT = "";
@@ -235,7 +235,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = SleepDisplay_Prefix.pch;
+				GCC_PREFIX_HEADER = SleepDisplay_objc_Prefix.pch;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = SleepDisplay;
 				SDKROOT = "";
@@ -355,7 +355,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "SleepDisplay" */ = {
+		1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "SleepDisplay_objc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB927908733DD40010E9CD /* Debug */,
@@ -371,6 +371,7 @@
 				3BB02A3F19412552001FEA23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
