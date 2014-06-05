@@ -19,7 +19,6 @@
 
 import Foundation
 
-var args: String[] = []
 var shouldWake = false
 
 if let downcastArgs = NSProcessInfo.processInfo().arguments as? String[] {
