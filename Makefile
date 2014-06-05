@@ -1,7 +1,7 @@
 
 
 LEO_PROJECT=SleepDisplay_10.5.xcodeproj
-LION_PROJECT=SleepDisplay.xcodeproj
+LION_PROJECT=SleepDisplay_objc.xcodeproj
 VERSION=$(shell cat version)
 
 
