@@ -21,7 +21,7 @@ import Foundation
 
 var shouldWake = false
 
-if let downcastArgs = NSProcessInfo.processInfo().arguments as? String[] {
+if let downcastArgs = NSProcessInfo.processInfo().arguments as? [String] {
     for arg in downcastArgs {
         switch arg {
         case "-wake", "--wake", "-w":
