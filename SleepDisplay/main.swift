@@ -21,19 +21,17 @@ import Foundation
 
 var shouldWake = false
 
-if let downcastArgs = NSProcessInfo.processInfo().arguments as? [String] {
-    for arg in downcastArgs {
-        switch arg {
-        case "-wake", "--wake", "-w":
-            shouldWake = true
-        case "-help", "--help", "-h":
-            println("usage: SleepDisplay [-w]");
-            println("Without options, sleeps the display (not system sleep)");
-            println("use with the -w (--wake) option to wake");
-            exit(0);
-        default:
-            continue
-        }
+for arg in Process.arguments {
+    switch arg {
+    case "-wake", "--wake", "-w":
+        shouldWake = true
+    case "-help", "--help", "-h":
+        print("usage: SleepDisplay [-w]");
+        print("Without options, sleeps the display (not system sleep)");
+        print("use with the -w (--wake) option to wake");
+        exit(0);
+    default:
+        continue
     }
 }
 
